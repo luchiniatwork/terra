@@ -126,6 +126,16 @@ Clojure functions with:
 :file ($ (file "path.txt"))
 ```
 
+One last trick that might be interesting for you is that the `defterra` macro is just
+syntax sugar for a simple `def`. You can also specify your Terraform definitions by using
+the meta `^:terraform`:
+
+```clojure
+(def ^:terraform example_ec2 {:provider {:aws {:region :us-east-1}}
+                              :resource {:aws_instance {:example {:ami :ami-2757f631
+                                                                  :instance_type :t2.micro}}}})
+```
+
 ## Bugs
 
 If you find a bug, submit a [Github issue](https://github.com/luchiniatwork/terra/issues).
