@@ -95,17 +95,36 @@ Since the terraform files are always generated, it is recommended that you add t
 The `$` macro is a small utility helper to write Terraform interpolations in a more 
 Clojure-like way.
 
-For instance, in order to interpolate a variable, simply use `:count ($ var.count)`
+For instance, in order to interpolate a variable, simply use:
 
-If you want the entry `:us-east-1` from the list `var.amis`, simply use
-`:ami ($ (:us-east-1 var.amis))`
+```clojure
+:count ($ var.count)
+```
 
-The traditional `get` also works: `:ami ($ (get var.amis :us-east-1))`
+If you want the entry `:us-east-1` from the list `var.amis`, simply use:
 
-This also works for indexes of lists: `:ami ($ (get var.amis 0))`
+```clojure
+:ami ($ (:us-east-1 var.amis))
+```
+
+The traditional `get` also works here:
+
+```clojure
+:ami ($ (get var.amis :us-east-1))
+```
+
+This also works for indexes:
+
+```clojure
+:ami ($ (get var.amis 0))
+```
 
 Last but not least, you can specify a call to Terraform's functions as if they were 
-Clojure functions with: `:file ($ (file "path.txt"))`
+Clojure functions with:
+
+```
+:file ($ (file "path.txt"))
+```
 
 ## Bugs
 
