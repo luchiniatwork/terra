@@ -22,7 +22,7 @@ Add the following dependency to your `project.clj` file:
 
 [![Clojars Project](http://clojars.org/luchiniatwork/terra/latest-version.svg)](http://clojars.org/luchiniatwork/terra)
 
-Add the following plugin to your `:plugins` in your `project.clk` file:
+Add the following plugin to your `:plugins` in your `project.clj` file:
 
 [![Clojars Project](http://clojars.org/luchiniatwork/lein-terra/latest-version.svg)](http://clojars.org/luchiniatwork/lein-terra)
 
@@ -97,7 +97,7 @@ Clojure-like way.
 
 For instance, in order to interpolate a variable, simply use `:count ($ var.count)`
 
-If you want the entry `:us-east-1 from the list `var.amis`, simply use 
+If you want the entry `:us-east-1` from the list `var.amis`, simply use
 `:ami ($ (:us-east-1 var.amis))`
 
 The traditional `get` also works: `:ami ($ (get var.amis :us-east-1))`
