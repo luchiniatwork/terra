@@ -1,4 +1,4 @@
-(defproject luchiniatwork/terra "0.1.1"
+(defproject luchiniatwork/terra "0.1.2"
   :description "Write Terraform configurations in pure Clojure."
   :url "http://github.com/luchiniatwork/terra"
 

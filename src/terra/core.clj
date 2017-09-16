@@ -42,7 +42,7 @@
   (cond
     (nil? args) (str "${" form "}")
     (= 'get form) (str "${" (first args) "[" (sanitize-param (second args)) "]}")
-    :default (str "${" (function-call form args) ")}")))
+    :default (str "${" (function-call form args) "}")))
 
 (defmethod $form clojure.lang.Keyword
   [form [name#]]
